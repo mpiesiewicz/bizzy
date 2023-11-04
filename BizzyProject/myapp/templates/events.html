@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %} Events {% endblock %}
+
+{% block content %}
+<h1>Event List</h1>
+<ul>
+    {% for event in events %}
+    <li>
+        {{ event.title }}: {% if event.completed %}Completed{% else %}Not Completed{% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
